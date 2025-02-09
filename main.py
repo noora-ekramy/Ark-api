@@ -78,7 +78,7 @@ def calculate_fare(service_type, minutes, miles):
     base_fare = (distance_factor * miles) + (minute_rate * minutes)
     return price(base_fare, additional_pct, fixed_fee, sales_tax_pct)
 
-st.title('Uber Fare Calculator')
+st.title('ARK Fare Calculator')
 
 mins = st.number_input('Enter Minutes:', min_value=0.0, step=0.1)
 miles = st.number_input('Enter Miles:', min_value=0.0, step=0.1)
@@ -89,6 +89,6 @@ if st.button('Calculate Fare'):
     fare_x = calculate_fare('UBER X & Green & Comfort & WAV', mins, miles)
     fare_XL = calculate_fare('UBER XL', mins, miles)
     fare_Black = calculate_fare('UBER Black or Premier', mins, miles)
-    st.write(f'The fare for UBER X & Green & Comfort & WAV is: ${fare_x}')
-    st.write(f'The fare for UBER XL is: ${fare_XL}')
-    st.write(f'The fare for UBER Black or Premier is: ${fare_Black}')
+    st.write(f'The fare for ARK X & Green & Comfort & WAV is: ${fare_x}')
+    st.write(f'The fare for ARK XL is: ${fare_XL}')
+    st.write(f'The fare for ARK Black or Premier is: ${fare_Black}')
